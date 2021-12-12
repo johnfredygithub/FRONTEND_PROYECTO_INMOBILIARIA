@@ -13,7 +13,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class UsersComponent implements OnInit {
   public lst: any;
-  public columnas: string[] = ['id','USUARIO','EMAIL','TIPO','ESTADO','ACTIONS'];
+  public columnas: string[] = ['ID','NOMBRE','APELLIDOS','CEDULA','TELEFONO','DIRECCION','EMAIL','FECHA INICIO','ID_ADMN','ACTIONS'];
   readonly width:string='300px';
   ApiEditorial: any;
   constructor(
@@ -31,11 +31,11 @@ export class UsersComponent implements OnInit {
   getUsuarios(){
     this.api_service.getUsuarios().subscribe( response => {
       this.lst=response;
-      ////console.log(response);     
+     ///
     });  
 }
 
- ///////POST ADD 
+ ///////POST ADD con dialog user component 
  openAdd(){
   const dialogRef=this.dialog.open(DialogusersComponent,{
     width:'300'

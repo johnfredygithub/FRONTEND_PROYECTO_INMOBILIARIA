@@ -18,7 +18,7 @@ const HttpOptions ={
 })
 export class APIService{
 
-  url: string='http://localhost:3000/users';
+  url: string='http://localhost:3000/asesores';
   
   constructor(
     private _http: HttpClient
@@ -27,16 +27,15 @@ export class APIService{
   ////////GET
   getUsuarios(): Observable<Response> {
     return this._http.get<Response>(this.url);
+    console.log(Response);
   }
 
+
+  ////methodo post
   add(user:Users):Observable<Response>{
     return this._http.post<Response>(this.url,user,HttpOptions);
+    console.log(Response);
   }
-
-
-  
-
-
 
 
 }

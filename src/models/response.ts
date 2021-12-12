@@ -1,5 +1,5 @@
 export interface Response{
-  "message":string;
+  //error: any;   
   "data":{ 
   Ase_Id: number;
   Ase_Nombres: string;
@@ -9,6 +9,6 @@ export interface Response{
   Ase_Direccion: string;
   Ase_Email: string;
   FechaInicio: string;
-  Adm_Id:string;
+  Adm_Id:number;
 }
 }

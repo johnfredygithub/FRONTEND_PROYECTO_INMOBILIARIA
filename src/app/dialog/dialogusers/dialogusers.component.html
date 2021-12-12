@@ -3,65 +3,59 @@
   <br />
 
   <mat-form-field appearance="fill">
-    <mat-label>USERNAME</mat-label>
-    <input type="email" matInput [(ngModel)]="username" required />
-    <!--   {{titulo}} [(ngModel)]="titulo" -->
+    <mat-label>NOMBRE</mat-label>
+    <input type="text" matInput [(ngModel)]="Ase_Nombres" required />
+   
   </mat-form-field>
   <br /> 
+  <mat-form-field appearance="fill">
+    <mat-label>APELLIDOS</mat-label>
+    <input type="text" matInput [(ngModel)]="Ase_Apellidos" required/>    
+  </mat-form-field>
   <br />
+  <mat-form-field appearance="fill">
+    <mat-label>CEDULA</mat-label>
+    <input type="text" matInput [(ngModel)]="Ase_Cedula" required />
+   
+  </mat-form-field>
+  <br /> 
+  <mat-form-field appearance="fill">
+    <mat-label>TELEFONO</mat-label>
+    <input type="text" matInput [(ngModel)]="Ase_Telefono" required />
+   
+  </mat-form-field>
+  <br /> 
+  <mat-form-field appearance="fill">
+    <mat-label>DIRECCION</mat-label>
+    <input type="text" matInput [(ngModel)]="Ase_Direccion" required />
+   
+  </mat-form-field>
+  <br /> 
   <mat-form-field appearance="fill">
     <mat-label>EMAIL</mat-label>
-    <input type="email" matInput [(ngModel)]="email" required/>
-    
+    <input type="text" matInput [(ngModel)]="Ase_Email" required />
+   
   </mat-form-field>
- 
-
-  <!-- <mat-form-field appearance="fill">
-    <mat-label>Enter your email</mat-label>
-    <input matInput placeholder="pat@example.com" [formControl]="email" required>
-    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-  </mat-form-field>
-
-
-
+  <br /> 
   <mat-form-field appearance="fill">
-    <mat-label>PASSWORD</mat-label>
-    <input matInput  [(ngModel)]="password" [type]="hide?'password':'text'">
-    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-      <mat-icon>{{hide?'visibility_off':'visibility'}}</mat-icon>
-    </button>
-  </mat-form-field> -->
-
-  <!-- <br />
-  <mat-form-field appearance="fill">
-    <mat-label>PASSWORD</mat-label>
-    <input type="password" matInput [(ngModel)]="password" />
-    
+    <mat-label>FECHA INICIO</mat-label>
+    <input type="text" matInput [(ngModel)]="FechaInicio" required />  
   </mat-form-field>
-  <br />
- -->
-  <br />
-  <br />
+
+
+  <br /> 
+<!--   <br />
   <mat-form-field appearance="fill">
     <mat-label>Select an option</mat-label>
     <mat-select [(ngModel)]="seleccionada_tipo" >
       <mat-option>None</mat-option>      
-      <mat-option  *ngFor="let tipo_user of tipo_user" [value]="tipo_user.nombre">{{tipo_user.nombre}}</mat-option>
+      <mat-option  *ngFor="let Adm_Id_x of Adm_Id" [value]="Adm_Id_x.nombre">{{Adm_Id_x.est}}</mat-option>
     </mat-select>
-  </mat-form-field>
-
-  <br />
-  <mat-form-field appearance="fill">
-    <mat-label>Select an option</mat-label>
-    <mat-select [(ngModel)]="seleccionada" >
-      <mat-option>None</mat-option>      
-      <mat-option  *ngFor="let estado  of estado" [value]="estado.nombre">{{estado.nombre}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <p>You selected: {{seleccionada}}</p>
+  </mat-form-field> -->
 
 
 <div mat-dialog-actions>
   <button mat-raised-button (click)="close()">CANCELAR</button>
   <button mat-raised-button COLOR="primary" (click)="addUser()">GUARDAR</button>
 </div>
+ 

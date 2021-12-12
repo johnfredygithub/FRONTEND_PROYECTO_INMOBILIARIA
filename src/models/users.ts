@@ -1,5 +1,5 @@
 export interface Users{
-    Ase_Id: number,
+        //Ase_Id: number,
     Ase_Nombres: string,
     Ase_Apellidos: string,
     Ase_Cedula: string,

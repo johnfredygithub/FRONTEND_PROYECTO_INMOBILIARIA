@@ -17,58 +17,31 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 }
 
 
-
-
-
-
-
-
-
-
 @Component({
  ///selector: 'app-dialogusers',
   selector: 'input-error-state-matcher-example',
   templateUrl: './dialogusers.component.html',
   styleUrls: ['./dialogusers.component.scss'],
 })
+
 export class DialogusersComponent {
-  email = new FormControl('', [Validators.required, Validators.email]);
 
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'Youaaaaaaaaa must enter a value';
-    }
-
-    return this.email.hasError('email') ? 'Not a valid email' : '';
-  }
-
-
-  public hide = true;
-  public username: string="";
-  ///public email: string="";
-    public password: string="";
-    tipo_user=[{
+  public Ase_Nombres: string="";
+  public Ase_Apellidos:string="";
+  public Ase_Cedula: string="";
+  public Ase_Telefono: string="";
+  public Ase_Direccion:  string="";
+  public Ase_Email: string="";
+  public FechaInicio: string="";
+  /////piblic id admin
+ /*  public Adm_Id=[{
       est:1,
-      nombre: "ADMIN"
-  },{
-      est:2,
-      nombre: "ASESOR"
-  },{
-    est:3,
-    nombre: "CLIENTE"
-}
-];    
-seleccionada_tipo: string = this.tipo_user[0].nombre; 
-    estado=[{
-      est:1,
-      nombre: "ACTIVO"
-  },{
-      est:2,
-      nombre: "INACTIVO"
+      nombre: "ADMIN1"
   }
-];    
-seleccionada: string = this.estado[0].nombre;
-
+]; */    
+//seleccionada_tipo: number = this.Adm_Id[0].est; 
+seleccion_admin=1;
+    
 
   constructor(
 
@@ -81,22 +54,26 @@ seleccionada: string = this.estado[0].nombre;
     this.dialogRef.close();
   }
   addUser(){const user:Users = {
-      username:this.username,
-      email:this.email,
-      password:this.password,
-      tipo_user:this.seleccionada_tipo,
-      estado:this.seleccionada
+    Ase_Nombres:this.Ase_Nombres,
+      Ase_Apellidos:this.Ase_Apellidos,
+      Ase_Cedula:this.Ase_Cedula,
+      Ase_Telefono:this.Ase_Telefono,
+      Ase_Direccion:this.Ase_Direccion,
+      Ase_Email:this.Ase_Email,
+      FechaInicio:this.FechaInicio,            
+      Adm_Id:this.seleccion_admin
     };
-    //console.log(user);
+  
     this.api.add(user).subscribe(response => {
-      console.log(response.data);
-       if(response.message ==="USER CREATED"){
+      console.log(response);
+       if(response){
         this.dialogRef.close();
         this.snackBar.open("CLIENTE INGRESADO CORRECTAMENTE","",{
           duration:2000
         });
       }else{
-        this.snackBar.open("ERROR VERIFIQUE EMAIL ","",{
+        this.dialogRef.close();
+        this.snackBar.open("ERROR","",{
           duration:2000
         });
       }
