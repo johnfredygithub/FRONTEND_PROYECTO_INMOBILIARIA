@@ -1,0 +1,67 @@
+<H1 mat-dialog-title>NUEVO USUARIO</H1>
+<div mat-dialog-content>
+  <br />
+
+  <mat-form-field appearance="fill">
+    <mat-label>USERNAME</mat-label>
+    <input type="email" matInput [(ngModel)]="username" required />
+    <!--   {{titulo}} [(ngModel)]="titulo" -->
+  </mat-form-field>
+  <br /> 
+  <br />
+  <mat-form-field appearance="fill">
+    <mat-label>EMAIL</mat-label>
+    <input type="email" matInput [(ngModel)]="email" required/>
+    
+  </mat-form-field>
+ 
+
+  <!-- <mat-form-field appearance="fill">
+    <mat-label>Enter your email</mat-label>
+    <input matInput placeholder="pat@example.com" [formControl]="email" required>
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+
+
+  <mat-form-field appearance="fill">
+    <mat-label>PASSWORD</mat-label>
+    <input matInput  [(ngModel)]="password" [type]="hide?'password':'text'">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide?'visibility_off':'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field> -->
+
+  <!-- <br />
+  <mat-form-field appearance="fill">
+    <mat-label>PASSWORD</mat-label>
+    <input type="password" matInput [(ngModel)]="password" />
+    
+  </mat-form-field>
+  <br />
+ -->
+  <br />
+  <br />
+  <mat-form-field appearance="fill">
+    <mat-label>Select an option</mat-label>
+    <mat-select [(ngModel)]="seleccionada_tipo" >
+      <mat-option>None</mat-option>      
+      <mat-option  *ngFor="let tipo_user of tipo_user" [value]="tipo_user.nombre">{{tipo_user.nombre}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <br />
+  <mat-form-field appearance="fill">
+    <mat-label>Select an option</mat-label>
+    <mat-select [(ngModel)]="seleccionada" >
+      <mat-option>None</mat-option>      
+      <mat-option  *ngFor="let estado  of estado" [value]="estado.nombre">{{estado.nombre}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p>You selected: {{seleccionada}}</p>
+
+
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="close()">CANCELAR</button>
+  <button mat-raised-button COLOR="primary" (click)="addUser()">GUARDAR</button>
+</div>
