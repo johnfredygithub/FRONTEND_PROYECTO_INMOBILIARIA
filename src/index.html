@@ -42,14 +42,70 @@
    
   </nav>
 
-
-
-
-  
-   <app-home></app-home>
-  <app-root></app-root>
+ 
+<app-home></app-home>
+<app-root></app-root>
   
 
+
+
+<div data-aos="fade-right"><h1>gdsgdgs</h1></div>
+
+  
+<script type="text/javascript">
+  let url ="http://localhost:3000/inmuebles";
+  fetch(url) //url_del_api
+    .then((response) => response.json()) //resolver respuesta
+    .then((data) => mostrarData(data)) //leer data y mostrar en consola
+    .catch((error) => console.log(error)); //mostrar si hay error
+
+  const mostrarData = (data) => {
+    console.log(data);
+    let body = "";
+    for (let i = 0; i < data.length; i++) {
+      body += `<br><br><H1>${data[i].In_TipoInmueble}</H1>              
+        <div  class="col-sm-3">
+          <div class="card">
+            <img  src=""  class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">${data[i].In_TipoInmueble}</h5>
+              <p class="card-text">${data[i].In_Ciudad}</p>
+              <p class="card-text">valor: ${data[i].In_Valor}</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>       
+        `;
+    }
+    document.getElementById("data").innerHTML = body;
+    
+  };
+</script>
 
 </body>
+
+
+
+
+  <!-- scripts de JS -->
+  <!-- <script type="text/javascript" src="js/scripts.js"></script> -->
+  <!-- BARBA.JS -->
+  <!-- unpkg -->
+  <script src="https://unpkg.com/@barba/core"></script>
+
+  <!-- jsdelivr -->
+  <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+  <!--GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <!-- AOS.JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- SWIPER.JS -->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+    integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+    crossorigin="anonymous"
+  ></script>
 </html>

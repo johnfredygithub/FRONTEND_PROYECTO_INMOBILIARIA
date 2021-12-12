@@ -5,7 +5,7 @@ import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+//import AOS from '@aos';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -37,6 +37,8 @@ export class HomeComponent implements OnInit {
   }
   
     ngOnInit(): void {
+    
+    
   }
 
 }
