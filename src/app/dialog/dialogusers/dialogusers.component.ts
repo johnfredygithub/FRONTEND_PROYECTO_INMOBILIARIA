@@ -33,6 +33,7 @@ export class DialogusersComponent {
   public Ase_Direccion:  string="";
   public Ase_Email: string="";
   public FechaInicio: string="";
+  public Ase_Clave:string:"";
   /////piblic id admin
  /*  public Adm_Id=[{
       est:1,
