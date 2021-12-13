@@ -30,10 +30,11 @@ export class DialogusersComponent {
   public Ase_Apellidos:string="";
   public Ase_Cedula: string="";
   public Ase_Telefono: string="";
-  public Ase_Direccion:  string="";
+ 
   public Ase_Email: string="";
+  public Ase_Clave: string="";
   public FechaInicio: string="";
-  public Ase_Clave:string:"";
+ 
   /////piblic id admin
  /*  public Adm_Id=[{
       est:1,
@@ -59,10 +60,12 @@ seleccion_admin=1;
       Ase_Apellidos:this.Ase_Apellidos,
       Ase_Cedula:this.Ase_Cedula,
       Ase_Telefono:this.Ase_Telefono,
-      Ase_Direccion:this.Ase_Direccion,
+     
       Ase_Email:this.Ase_Email,
-      FechaInicio:this.FechaInicio,            
+      FechaInicio:this.FechaInicio, 
+      Ase_Clave:this.Ase_Clave,           
       Adm_Id:this.seleccion_admin
+      
     };
   
     this.api.add(user).subscribe(response => {
